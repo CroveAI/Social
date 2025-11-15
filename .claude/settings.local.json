@@ -1,0 +1,49 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log:*)",
+      "Bash(node --version:*)",
+      "Bash(pnpm --version:*)",
+      "Bash(npm install:*)",
+      "Bash(if [ -f .env ])",
+      "Bash(then echo \"exists\")",
+      "Bash(else echo \"not exists\")",
+      "Bash(fi)",
+      "Bash(cp:*)",
+      "Bash(pnpm install:*)",
+      "Bash(docker compose -f docker-compose.dev.yaml up -d)",
+      "Bash(docker --version)",
+      "Bash(powershell.exe -Command \"docker --version\")",
+      "Bash(powershell.exe -Command \"cd ''d:\\Projects\\Social''; docker compose -f docker-compose.dev.yaml up -d\")",
+      "Bash(pnpm run prisma-db-push)",
+      "Bash(az --version)",
+      "Bash(powershell.exe -Command \"az --version\")",
+      "Bash(powershell.exe -Command \"az postgres flexible-server firewall-rule create --resource-group postiz-dev-rg --name crove --rule-name AllowAll --start-ip-address 0.0.0.0 --end-ip-address 255.255.255.255\")",
+      "Bash(pnpm run dev)",
+      "Bash(pnpm run dev:backend)",
+      "Bash(pnpm run dev:frontend)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3030)",
+      "Bash(tasklist /FI \"IMAGENAME eq node.exe\" /FO TABLE)",
+      "Bash(powershell.exe -Command \"Get-NetTCPConnection -LocalPort 3030 -ErrorAction SilentlyContinue | Select-Object LocalAddress,LocalPort,State,OwningProcess\")",
+      "Bash(powershell.exe -Command \"Get-Process node -ErrorAction SilentlyContinue | Select-Object Id,ProcessName,StartTime | Format-Table\")",
+      "Bash(powershell.exe -Command \"docker ps\")",
+      "Bash(powershell.exe -Command \"Invoke-WebRequest -Uri ''http://localhost:3030/'' -UseBasicParsing | Select-Object StatusCode, Content\")",
+      "Bash(pnpm list:*)",
+      "Bash(pnpm outdated:*)",
+      "Bash(powershell.exe -Command \"redis-cli --version\")",
+      "Bash(powershell.exe -Command \"(Invoke-WebRequest -Uri ''https://api.ipify.org'' -UseBasicParsing).Content\")",
+      "Bash(powershell.exe -Command \"az redis firewall-rules create --resource-group postiz-dev-rg --name Crove --rule-name AllowMyIP --start-ip 27.74.202.4 --end-ip 27.74.202.4\")",
+      "Bash(powershell.exe -Command \"az group list --output table\")",
+      "Bash(findstr:*)",
+      "Bash(timeout /t 10)",
+      "Bash(pnpm run build:*)",
+      "Bash(az postgres flexible-server firewall-rule create:*)"
+    ],
+    "deny": [
+      "Bash(powershell.exe -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(powershell.exe -Command \"Stop-Process -Name node -Force\")"
+    ],
+    "ask": []
+  }
+}
